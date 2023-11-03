@@ -18,7 +18,7 @@ WORKDIR /multipaper
 USER multipaper
 
 # Download multipaper
-ADD --chown=multipaper:multipaper https://api.multipaper.io/v2/projects/multipaper/versions/$MULTIPAPER_VERSION/builds/$MULTIPAPER_BUILD/downloads/multipaper-master-$MULTIPAPER_VERSION-all.jar multipaper-master.jar
+ADD --chown=multipaper:multipaper https://api.multipaper.io/v2/projects/multipaper/versions/$MULTIPAPER_VERSION/builds/$MULTIPAPER_BUILD/downloads/multipaper-master-$MASTER_VERSION-all.jar multipaper-master.jar
 
 # Expose the ports of the master server and proxy
 EXPOSE 35353/tcp
