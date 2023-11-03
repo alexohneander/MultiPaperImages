@@ -2,8 +2,8 @@
 FROM eclipse-temurin:17.0.3_7-jre-alpine
 
 # Versioning
-ARG VERSION=1.18.2
-ARG BUILD=95
+ARG VERSION=1.20.1
+ARG BUILD=9
 ARG FULL_VERSION="$VERSION-$BUILD"
 
 # Setup groups and install dumb init
