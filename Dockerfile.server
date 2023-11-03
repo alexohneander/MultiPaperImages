@@ -18,7 +18,7 @@ WORKDIR /multipaper
 USER multipaper
 
 # Download multipaper
-ADD --chown=multipaper:multipaper https://multipaper.io/api/v2/projects/multipaper/versions/$VERSION/builds/$BUILD/downloads/multipaper-$FULL_VERSION.jar multipaper.jar
+ADD --chown=multipaper:multipaper https://api.multipaper.io/api/v2/projects/multipaper/versions/$VERSION/builds/$BUILD/downloads/multipaper-$FULL_VERSION.jar multipaper.jar
 
 # Expose the required ports
 EXPOSE 25565/tcp
