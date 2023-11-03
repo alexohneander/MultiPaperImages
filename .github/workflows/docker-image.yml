@@ -1,0 +1,20 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image for Multipaper Master
+      run: docker build . --file Dockerfile.master --tag alexohneander/multipaper-master:$(date +%s)
+    - name: Build the Docker image for Multipaper Server
+      run: docker build . --file Dockerfile.server --tag alexohneander/multipaper-server:$(date +%s)
