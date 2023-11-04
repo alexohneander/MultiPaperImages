@@ -20,6 +20,9 @@ USER multipaper
 # Download multipaper
 ADD --chown=multipaper:multipaper https://api.multipaper.io/v2/projects/multipaper/versions/$VERSION/builds/$BUILD/downloads/multipaper-$FULL_VERSION.jar multipaper.jar
 
+# Copy the server icon
+COPY --chown=multipaper:multipaper misc/server-icon.png /multipaper/server-icon.png
+
 # Expose the required ports
 EXPOSE 25565/tcp
 
